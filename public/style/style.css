@@ -1,0 +1,1984 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+.book-container {
+    font-family: 'PT Sans',sans-serif;
+    width: auto;
+    margin: 0 auto;
+    font-size: 0;
+    position: relative;
+    padding-top: 50px;
+    height: auto;
+    text-align: center;
+}
+
+.product-card {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    user-select: none;
+    font-size: 80%;
+    text-decoration: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+}
+
+.product-card__title {
+    max-height: 2.4em;
+    overflow: hidden;
+}
+
+.product-card__author {
+    color: rgba(0,0,0,0.3);
+    max-height: 1.2em;
+    overflow: hidden;
+}
+
+.product-card {
+    font-size: 14px;
+    line-height: 1.2;
+    color: rgba(0,0,0,0.8);
+    position: relative;
+    background: #fff;
+    width: 240px;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#menu-overlay{
+    display: none; 
+}
+
+#banner{
+    background: url(../images/inb.png) no-repeat;
+    width: 100%;
+    height: 100vh;
+    /* background-size:100%; */
+    background-size:cover;
+}
+
+/* бургер */
+.bodyb{
+    overflow: hidden;
+}
+
+.burger_text_Air{
+    font-size: 36px;
+    font-family: Roboto Slab;
+    color: #FFFFFF;
+    margin-top: -290px;
+}
+
+.bta{
+    padding-top: 100px;
+}
+
+
+#contain{
+    background: url(../images/inb.png) no-repeat;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.h_text{
+    font-family: Roboto Condensed;
+    font-size: 64px;
+    color: #FFFFFF;
+}
+
+.typed-cursor, .typed-cursor.typed-cursor--blink{
+    font-size: 64px;
+    color: #FFFFFF;
+}
+
+.text_c{
+    position: relative;
+    top: 25%;
+}
+
+header li{
+    list-style-type: none; /* Убираем маркеры */
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+}
+
+header a{
+    color: #FFFFFF;
+    font-family: 'Roboto Slab', serif;
+}
+
+header a:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.Air{
+    font-size: 36px;
+}
+
+.Home_Book{
+    font-size: 24px;
+}
+
+a.Home_Book{
+    position: relative;
+    padding: 0px 5px;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+a.Home_Book:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-top: 1px solid #FFFFFF; /* Линия сверху текста */
+    transition: 0.5s;
+}
+
+a.Home_Book:hover:before{
+    width: 100%;
+    height: 100%;
+}
+
+a.Home_Book:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-bottom: 1px solid #FFFFFF; /* Линия снизу текста */
+    transition: 0.5s;
+}
+
+a.Home_Book:hover:after{
+    width: 100%;
+    height: 100%;
+}
+
+a.Home_Book_active{
+    position: relative;
+    padding: 0px 5px;
+    font-size: 24px;
+}
+
+a.Home_Book_active:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #FFFFFF; /* Линия сверху текста */
+    transition: 0.5s;
+}
+
+a.Home_Book_active:hover:before{
+    width: 0;
+    height: 0;
+}
+
+a.Home_Book_active:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #FFFFFF; /* Линия снизу текста */
+    transition: 0.5s;
+}
+
+a.Home_Book_active:hover:after{
+    width: 0;
+    height: 0;
+}
+
+
+.hbp{
+    padding-top: 10px;
+}
+
+/* button (разноцветная кнопка на главной странице)*/
+
+.button_n{
+    /* position: relative; */
+    justify-content: center;
+    top: 44%;
+    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 0.5s; /*Скорость перехода состояния элемента*/
+    animation: show 10s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 4s; /* Задержка перед началом */
+    /* margin-top: 350px; */
+    /* width: 360px;
+    height: 81px; */
+}
+
+@keyframes show{
+
+    0%{
+    opacity:0;
+    }
+
+    100% {
+    opacity:1;
+    }
+}
+
+
+a.button_c{
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    /* left: 1200px;
+    top: 550px; */
+    transform: translate(-20%, -50%);
+    /* width: 200px;
+    height: 60px; */
+    width: 360px;
+    height: 81px;
+    padding-left: 40px;
+    text-align: left;
+    line-height: 75px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #F22121, #FF008A, #CE00DF, #8F00FF);
+    background-size: 100%;
+    border-radius: 48px;
+    z-index: 1;
+}
+  
+  a.button_c:hover
+  {
+    animation: animate_button 8s linear infinite;
+  }
+  
+  @keyframes animate_button
+  {
+    0%
+    {
+      background-position: 0%;
+    }
+    100%
+    {
+      background-position: 400%;
+    }
+  
+  }
+  
+  a.button_c:before
+  {
+   content: '' ;
+   position: absolute;
+   top: -5px;
+   left: -5px;
+   right: -5px;
+   bottom:-5px;
+   z-index: -1;
+   background: linear-gradient(90deg, #F22121, #FF008A, #CE00DF, #8F00FF);
+   background-size: 400%;
+   border-radius: 70px;
+   filter: blur(50px);
+   opacity: 0;
+   transition: 0.2s;
+  }
+  
+  a.button_c:hover:before
+  {
+    filter: blur(50px);
+    opacity: 1;
+    animation: animate_button 8s linear infinite;
+  }
+
+
+/* блок отвечает за стрелку на разноцветной кнопке*/
+.arrow:before,
+.arrow:after{
+    content: '';
+    position: absolute;
+    top: 47%;
+    left: 85%;
+    transform: translate(-90%, -50%) rotate(90deg) ;
+}
+
+.arrow:before{
+    width: 2px;
+    height: 31px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color:white;
+}
+
+.arrow:after{
+    width: 17px;
+    height: 17px;
+    transform: translate(-30%, -55%) rotate(140deg) ;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+/* scrolldown */
+.scrolldown{
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-20px) translateX(-50px) rotate(45deg);
+}
+
+.scrolldown span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    animation: animate_scrolldown 1.5s linear infinite;
+}
+
+.scrolldown span:nth-child(1){
+    transform: translate(-20px, -20px);
+    animation-delay: -0.4s;
+}
+
+@keyframes animate_scrolldown
+{
+    0%{
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+
+    25%{
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+
+    50%, 100%{
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+}
+
+/* отвечает за блок "О нас" */
+.img_about_us{
+    width: 570px;
+    height: 551px;
+    margin-top: -30px;
+}
+
+.h_about_us{
+    font-family: Roboto Slab;
+    font-size: 36px;
+}
+
+.text_about_us{
+    font-family: Roboto Slab;
+    font-size: 24px;
+}
+
+.text_block_about_us{
+    width: 612px;
+    margin-top: 15px;    
+}
+
+.block_about_us{
+    display: flex;
+}
+
+.m_block_about_us{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.h2_about_us{
+    display: none;
+}
+
+/* Отвечает за блок "Контакты" */
+.block_contact{
+    display: flex;
+    margin-top: 250px;
+}
+
+.h_contact{
+    font-family: Roboto Slab;
+    font-size: 36px;
+}
+
+.text_contact{
+    font-family: Roboto Slab;
+    font-size: 24px;
+}
+
+.img_phone{
+    width: 36px;
+    height: 37px;
+    margin-right: 20px;
+}
+
+.img_gmail{
+    width: 38px;
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+.img_contact{
+    width: 530px;
+    height: 464px;
+    margin-top: -50px;
+}
+
+.text_phone{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.phone_and_gmail{
+    margin-left: 40px;
+}
+
+.modile_info_block{
+    display: none;
+}
+
+/* Отвечает за блок "Книги" */
+
+.img_block{
+    position: relative;
+    width: 153px;
+    height: 228px;
+}
+
+.tib{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: Roboto Slab;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.text_img_book_1{
+    padding-top: 59%;
+    padding-left: 15%;
+}
+
+.text_img_book_2{
+    padding-top: 73%;
+    padding-left: 40%;
+}
+
+.descr{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0,0,.7);
+    opacity: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.img_block:hover .descr{
+    display: block;
+    opacity: 1;
+}
+
+.img_block:hover .tib{
+    display: block;
+    opacity: 1;
+}
+
+.marg_book{
+    margin-top: 167px;
+    margin-bottom: 83px;
+}
+
+.marg_book_b{
+    margin-bottom: 83px;
+}
+
+.book_left{
+    margin-left: 150px;
+}
+
+.h2_book{
+    font-family: Roboto Slab;
+    font-size: 36px;
+}
+
+.img_book{
+    width: 153px;
+    height: 228px;
+}
+
+.text_book p{
+    font-family: Roboto Slab;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.title_text_book{
+    margin-left: 20px;
+}
+
+.book_card a{
+    text-decoration: none;
+}
+
+.book_card{
+    width: 270px;
+}
+
+.button_go_to_site{
+    width: 52px;
+    height: 52px;
+    background: #DD5B5B;
+    border-radius: 47px;
+    margin-left: -2px;
+    margin-top: 25px;
+}
+
+div.button_go_to_site:hover{
+    width: 159px;
+    transition: 1s;
+}
+
+.plus:before, .plus:after {
+    position: absolute;
+    content: ' ';
+    height: 35px;
+    width: 0px;
+    border: 2px solid #000000;
+    margin-top: 8px;
+    margin-left: 24px;
+    opacity: 1;
+}
+
+.plus:before {
+    transform: rotate(180deg);
+}
+
+.plus:after {
+    transform: rotate(-90deg);
+}
+
+.text_other_site{
+    /* position: relative; */
+    margin-left: 25px;
+    color: #000000;
+    font-size: 18px;
+    font-family: Roboto Slab;
+    opacity: 0;
+}
+
+.button_go_to_site a{
+    text-decoration: none;
+}
+
+.button_go_to_site:hover a .plus{
+    opacity: 0;
+}
+
+.button_go_to_site:hover a .text_other_site{
+    color: #000000;
+    font-size: 18px;
+    font-family: Roboto Slab;
+    transition: 5s;
+    opacity: 1;
+}
+
+.button_marg{
+    margin-top: 50px;
+}
+
+/* Отвечает за блок "Подвал" */
+.footer{
+    width: 100%;
+    background: #645F5F;
+    border-radius: 73px;
+}
+
+.Air2{
+    font-size: 36px;
+    font-family: Roboto Slab;
+    color: #FFFFFF;
+}
+
+div.footer  a {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: Roboto Slab;
+    text-decoration: none;
+}
+
+.other_footer_text {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: Roboto Slab;
+}
+
+.Copyright_text{
+    font-size: 16px;
+    color: #FFFFFF;
+    font-family: Roboto Slab;
+}
+
+.text_Timur{
+    font-size: 18px;
+    font-family: Roboto Slab;
+    color: #FFFFFF;
+}
+
+.ml_text_footer{
+    margin-left: 115px;
+}
+
+.mb_text_footer{
+    margin-bottom: 20px;
+}
+
+.mb_title_footer{
+    margin-bottom: 68px;
+}
+
+.mb_text_Timur{
+    margin-bottom: 35px;
+}
+
+.img_phone_footer{
+    width: 36px;
+    height: 37px;
+    margin-right: 15px;
+}
+
+.img_gmail_footer{
+    width: 38px;
+    height: 30px;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+.flex_footer{
+    display: flex;
+    margin-left: -15px;
+}
+
+
+/* версия для больших мониторов */
+@media screen and (max-width: 2000px) and (min-width: 1600px){
+    /* Отвечает за блок "Подвал" */
+    .ml-books{
+        margin-left: 70px;
+    }
+}
+
+
+/* планшетная версия */
+@media screen and (max-width: 900px) and (min-width: 589px){
+    
+    a.button_c{
+        width: 324px;
+        height: 81px;
+        padding-left: 25px;
+        line-height: 75px;
+    }
+
+    .arrow:before,
+    .arrow:after{
+        content: '';
+        position: absolute;
+        top: 47%;
+        left: 87%;
+        transform: translate(-90%, -50%) rotate(90deg) ;
+    }
+
+    .arrow:after{
+        width: 17px;
+        height: 17px;
+        transform: translate(-30%, -55%) rotate(140deg) ;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+    }
+
+    .button_n{
+        justify-content: center !important;
+        padding-left: 180px;
+        top: 34%;
+    }
+
+    .scrolldown{
+        position: absolute;
+        top: 93%;
+        left: 55%;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-20px) translateX(-50px) rotate(45deg);
+    }
+
+    /* отвечает за блок "О нас" */
+    .block_about_us{
+        display: initial;
+    }
+
+    .h_about_us{
+        display: none;
+    }
+
+    .h2_about_us{
+        display: inline;
+        font-family: Roboto Slab;
+        font-size: 36px;
+    }
+
+    .img_block_about_us{
+        text-align: center;
+    }
+
+    .img_about_us{
+        width: 470px;
+        height: 451px;
+        margin-top: 0;
+    }
+
+    .text_block_about_us{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /* отвечает за блок "Контакты" */
+    .block_contact{
+        display: initial;
+    }
+
+    .modile_info_block{
+        display: inline;
+        text-align: center;
+    }
+    
+    .desktop_info_block{
+        display: none;
+    }
+
+    .img_contact{
+        width: 486px;
+        height: 406px;
+        margin-top: 0;
+    }
+
+    .h_contact{
+        margin-bottom: 50px;
+    }
+
+    .phone_and_gmail{
+        margin-right: 100px;
+        margin-left: 0;
+    }
+
+    .text_phone{
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .marg_text_contact{
+        margin-top: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    /* Отвечает за блок "Подвал" */
+    .ml_text_footer{
+        margin-left: 60px;
+    }
+
+    .img_phone_footer{
+        width: 36px;
+        height: 37px;
+        margin-right: 15px;
+        margin-left: 17px;
+    }
+
+    .img_gmail_footer{
+        width: 38px;
+        height: 30px;
+        margin-right: 15px;
+        margin-top: 2px;
+        margin-left: -30px;
+    }
+
+    .flex_footer{
+        margin-left: -15px;
+    }
+}
+
+@media screen and (max-width: 894px) and (min-width: 810px){
+    /* Отвечает за блок "Подвал" */
+    .ml-book{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 812px) and (min-width: 589px){
+    /* Отвечает за блок "Подвал" */
+    .ml_text_footer{
+        margin-left: 0px;
+    }
+   
+    div.footer a{
+        font-size: 18px;    
+    }
+
+    .other_footer_text{
+        font-size: 18px;    
+    }
+
+    .Copyright_text{
+        font-size: 12px;
+    }
+
+    .text_Timur{
+        font-size: 12px;
+    }
+
+    .img_gmail_footer{
+        margin-top: 0px;
+    }
+
+    .img_phone_footer{
+        margin-top: -5px;
+    }
+
+    .ml_text_footer{
+        margin-right: 20px;
+    }
+
+}
+
+/* планшетная версия*/
+@media screen and (max-width: 991px) and (min-width: 901px){
+
+    /* отвечает за блок "О нас" */
+    .block_about_us{
+        display: initial;
+    }
+
+    .h_about_us{
+        display: none;
+    }
+
+    .h2_about_us{
+        display: inline;
+        font-family: Roboto Slab;
+        font-size: 36px;
+    }
+
+    .img_block_about_us{
+        text-align: center;
+    }
+
+    .img_about_us{
+        width: 470px;
+        height: 451px;
+        margin-top: 0;
+    }
+
+    .text_block_about_us{
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    /* отвечает за блок "Контакты" */
+    .block_contact{
+        display: initial;
+    }
+    
+    .modile_info_block{
+        display: inline;
+        text-align: center;
+    }
+        
+    .desktop_info_block{
+        display: none;
+    }
+    
+    .img_contact{
+        width: 486px;
+        height: 406px;
+        margin-top: 0;
+    }
+    
+    .h_contact{
+        margin-bottom: 50px;
+    }
+    
+    .phone_and_gmail{
+        margin-right: 100px;
+        margin-left: 0;
+    }
+    
+    .text_phone{
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .marg_text_contact{
+        margin-top: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    /* Отвечает за блок "Подвал" */
+    .ml_text_footer{
+        margin-left: 90px;
+    }
+
+    .ml-books{
+        margin-left: 20px;
+    }
+        
+}
+
+@media screen and (max-width: 677px) and (min-width: 631px){
+    /* Отвечает за блок "Подвал" */
+    .mlg_book{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 630px) and (min-width: 589px){
+    /* Отвечает за блок "Подвал" */
+    .mlg_book{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 589px) and (min-width: 450px){
+    .hbp{
+        display: none;
+    }
+
+    /* отвечает за бургер */
+    .burger{
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    #menu-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #33636F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: 0.5s;
+    }
+
+    #menu-overlay.active{
+        transform: scale(1);
+    }
+
+    #menu-overlay ul{
+        position: relative;
+    }
+
+    #menu-overlay ul li{
+        position: relative;
+        list-style: none;
+        text-align: center;
+        display: block;
+    }
+
+    #menu-overlay ul li a{
+        position: relative;
+        text-decoration: none;
+        font-size: 36px;
+        padding: 0 10px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    .wrapper{
+        position: absolute;
+        top:55%;
+        left:90%;
+        transform:translate(-50%, -20%);
+        z-index: 1;
+    }
+
+    .wrapper .icon{
+        margin:20px;
+    }
+
+    #toggleIcon{
+        margin: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    #toggleIcon span{
+        background-color:#fff;
+        position: absolute;
+        border: 2px solid #FFFFFF;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        width:100%;
+        height: 4px;
+        transition-duration: 500ms
+    }
+
+    #toggleIcon span:nth-child(1){
+        top:10px;
+        left: 8px;
+        width: 20px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(2){
+        top:0px;
+        left: 0px;
+        opacity:1;
+        width: 35px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(3){
+        bottom:6px;
+        left: 0px;
+        width: 13px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(4){
+        bottom:6px;
+        left: 22px;
+        width: 13px;
+        height: 5px;
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(1){
+        transform: rotate(-3deg) scaleY(1.1);
+    }
+      
+    #toggleIcon:not(.open):hover span:nth-child(2){
+        transform: rotate(3deg) scaleY(1.1);
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(3){
+        transform: rotate(-4deg) scaleY(1.1);
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(4){
+        transform: rotate(-10deg) scaleY(1.1);
+    }
+
+    #toggleIcon.open span:nth-child(1){
+        opacity:0;
+    }
+
+    #toggleIcon.open span:nth-child(2){
+        transform: rotate(45deg);
+        top: 30%;
+    }
+
+    #toggleIcon.open span:nth-child(3){
+        width: 35px;
+        transform: rotate(-45deg);
+        top: 30%;
+    }
+
+    #toggleIcon.open span:nth-child(4){
+        opacity:0;
+    }
+
+    .h_text{
+        font-size: 50px;
+    }
+
+    .typed-cursor{
+        font-size: 50px !important;
+    }
+
+    /* button (разноцветная кнопка на главной странице)*/
+    a.button_c{
+        width: 324px;
+        height: 81px;
+        padding-left: 25px;
+        line-height: 75px;
+    }
+
+    .arrow:before,
+    .arrow:after{
+        content: '';
+        position: absolute;
+        top: 47%;
+        left: 87%;
+        transform: translate(-90%, -50%) rotate(90deg) ;
+    }
+
+    .arrow:after{
+        width: 17px;
+        height: 17px;
+        transform: translate(-30%, -55%) rotate(140deg) ;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+    }
+
+    .button_n{
+        justify-content: center !important;
+        padding-left: 180px;
+        top: 34%;
+    }
+
+    .scrolldown{
+        position: absolute;
+        top: 93%;
+        left: 60%;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-20px) translateX(-50px) rotate(45deg);
+    }
+
+    /* Отвечает за блок "О нас" */
+    .h_about_us{
+        display: none;
+    }
+
+    .h2_about_us{
+        display: inline;
+    }
+
+    .block_about_us{
+        display: initial;
+    }
+
+    .img_about_us{
+        width: 405px;
+        height: 379px;
+    }
+
+    .text_block_about_us{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* отвечает за блок "Контакты" */
+    .block_contact{
+        display: initial;
+    }
+
+    .desktop_info_block{
+        display: none;
+    }
+
+    .modile_info_block{
+        display: inline;
+        text-align: center;
+
+    }
+
+    .img_contact{
+        width: 350px;
+        height: 300px;
+        margin-top: 0;
+    }
+
+    .h_contact{
+        margin-bottom: 50px;
+    }
+
+    .phone_and_gmail{
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    .text_phone{
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .marg_text_contact{
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Отвечает за блок "Подвал" */
+    .ml_text_footer{
+        margin-left: 50px;
+    }
+
+    .Air2{
+        font-size: 24px;
+    }
+
+    div.footer  a {
+        font-size: 18px;
+    }
+        
+    .mb_title_footer{
+        margin-bottom: 40px;
+    }
+
+    .flex_footer2{
+        display: inline;
+    }
+
+    .other_footer_text {
+        font-size: 18px;
+    }
+    
+    .Copyright_text{
+        font-size: 12px;
+    }
+    
+    .text_Timur{
+        font-size: 12px;
+    }
+
+    .ml-books{
+        margin-left: 50px;
+    }
+
+    .mlg_book{
+        margin-left: 100px;
+    }
+
+    .mt_contact{
+        margin-top: -30px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 575px) and (min-width: 449px){
+    /* Отвечает за блок "Подвал" */
+    .mlg_book{
+        padding-right: 190px;
+        margin-left: -15px !important;
+    }
+
+    .ml-book{
+        padding-left: 50px;
+        margin-left: 0;
+    }
+
+    .ml_text_footer{
+        padding-left: 50px;
+        margin-left: 0;
+    }
+
+    .ml-books{
+        margin-left: 0;
+        margin-right: 50px;
+    }
+
+    .ml_about{
+        margin-left: -15px;
+    }
+
+}
+
+@media screen and (max-width: 545px) and (min-width: 449px){
+    a.button_c{
+        font-size: 20px;
+        padding-left: 40px;
+    }
+
+    .button_n{
+        padding-left: 120px;
+    }
+}
+
+@media screen and (max-width: 450px) and (min-width: 350px){
+    
+    /* отвечает за бургер */
+    .burger{
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    #menu-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #33636F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: 0.5s;
+    }
+
+    #menu-overlay.active{
+        transform: scale(1);
+    }
+
+    #menu-overlay ul{
+        position: relative;
+    }
+
+    #menu-overlay ul li{
+        position: relative;
+        list-style: none;
+        text-align: center;
+        display: block;
+    }
+
+    #menu-overlay ul li a{
+        position: relative;
+        text-decoration: none;
+        font-size: 36px;
+        padding: 0 10px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    .wrapper{
+        position: absolute;
+        top:55%;
+        left:90%;
+        transform:translate(-50%, -20%);
+        z-index: 1;
+    }
+
+    .wrapper .icon{
+        margin:20px;
+    }
+
+    #toggleIcon{
+        margin: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    #toggleIcon span{
+        background-color:#fff;
+        position: absolute;
+        border: 2px solid #FFFFFF;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        width:100%;
+        height: 4px;
+        transition-duration: 500ms
+    }
+
+    #toggleIcon span:nth-child(1){
+        top:10px;
+        left: 8px;
+        width: 20px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(2){
+        top:0px;
+        left: 0px;
+        opacity:1;
+        width: 35px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(3){
+        bottom:6px;
+        left: 0px;
+        width: 13px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(4){
+        bottom:6px;
+        left: 22px;
+        width: 13px;
+        height: 5px;
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(1){
+        transform: rotate(-3deg) scaleY(1.1);
+    }
+      
+    #toggleIcon:not(.open):hover span:nth-child(2){
+        transform: rotate(3deg) scaleY(1.1);
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(3){
+        transform: rotate(-4deg) scaleY(1.1);
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(4){
+        transform: rotate(-10deg) scaleY(1.1);
+    }
+
+    #toggleIcon.open span:nth-child(1){
+        opacity:0;
+    }
+
+    #toggleIcon.open span:nth-child(2){
+        transform: rotate(45deg);
+        top: 30%;
+    }
+
+    #toggleIcon.open span:nth-child(3){
+        width: 35px;
+        transform: rotate(-45deg);
+        top: 30%;
+    }
+
+    #toggleIcon.open span:nth-child(4){
+        opacity:0;
+    }
+
+    .typed-cursor, .typed-cursor.typed-cursor--blink{
+        font-size: 36px;
+        color: #FFFFFF;
+    }
+    
+    .text_c{
+        top: 15%;
+    }
+
+    .h_text{
+        font-size: 36px;
+        line-height: -10px;
+    }
+
+    .hbp{
+        display: none;
+    }
+
+    a.button_c{
+        font-size: 18px;
+        margin-right: -20px;
+    }
+
+    .button_n{
+        position: relative;
+        padding-left: 80px;
+        padding-right: 0px;
+        top: 35%;
+        width: 100%;
+    }
+
+    .arrow:before,
+    .arrow:after{
+        content: '';
+        position: absolute;
+        top: 47%;
+        left: 90%;
+        transform: translate( -20%, -50%) rotate(90deg) ;
+    }
+
+    .arrow:after{
+        width: 15px;
+        height: 15px;
+        transform: translate(-30%, -55%) rotate(140deg) ;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+    }
+
+    .arrow:before{
+        width: 2px;
+        height: 25px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background-color:white;
+    }
+
+    .scrolldown{
+        top: 93%;
+        left: 60%;
+    }
+
+    /* отвечает за блок "О нас" */
+    .block_about_us{
+        display: initial;
+    }
+
+    .h2_about_us{
+        display: inline;
+    }
+
+    .h_about_us{
+        display: none;
+    }
+
+    .text_block_about_us{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text_about_us{
+        font-family: Roboto Slab;
+        font-size: 18px;
+    }
+    
+    .img_about_us{
+        width: 350px;
+        height: 379px;
+    }
+
+    /* отвечает за блок "Контакты" */
+    .block_contact{
+        display: initial;
+    }
+
+    .desktop_info_block{
+        display: none;
+    }
+    
+    .modile_info_block{
+        display: inline;
+        text-align: center;
+    }
+
+    .h_contact{
+        margin-bottom: 50px;
+    }
+
+    .img_contact{
+        width: 350px;
+        height: 300px;
+        margin-top: 0;
+    }
+
+    .text_contact{
+        font-size: 18px;
+    }
+    
+    .text_phone{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .phone_and_gmail{
+        margin-left: 10px;
+    }
+
+    .ml_ph, .ml_tk{
+        margin-left: 2rem !important;
+    }
+
+    .book_left{
+        margin-left: 20%;
+    }
+    
+    /* отвечает за блок footer */
+
+    div.footer a{
+        font-size: 18px;
+    }
+
+    .other_footer_text{
+        font-size: 18px;
+    }
+
+    .ml_text_footer{
+        padding-left: 0px;
+        margin-left: 0;
+    }
+
+    .flex_footer2{
+        display: inline;
+    }
+
+    .text_Timur{
+        font-size: 12px;
+    }
+
+    .Copyright_text{
+        font-size: 12px;
+    }
+
+    .mt_contact{
+        margin-top: -30px;
+    }
+
+    .ml_about{
+        margin-left: -15px;
+    }
+
+    .mlg_book{
+        justify-content: start !important;
+    }
+    
+}
+
+
+@media screen and (max-width: 350px) and (min-width: 250px){
+    
+    /* отвечает за бургер */
+    .burger{
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    #menu-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #33636F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: 0.5s;
+    }
+
+    #menu-overlay.active{
+        transform: scale(1);
+    }
+
+    #menu-overlay ul{
+        position: relative;
+    }
+
+    #menu-overlay ul li{
+        position: relative;
+        list-style: none;
+        text-align: center;
+        display: block;
+    }
+
+    #menu-overlay ul li a{
+        position: relative;
+        text-decoration: none;
+        font-size: 36px;
+        padding: 0 10px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    .wrapper{
+        position: absolute;
+        top:55%;
+        left:90%;
+        transform:translate(-50%, -20%);
+        z-index: 1;
+    }
+
+    .wrapper .icon{
+        margin:20px;
+    }
+
+    #toggleIcon{
+        margin: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    #toggleIcon span{
+        background-color:#fff;
+        position: absolute;
+        border: 2px solid #FFFFFF;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        width:100%;
+        height: 4px;
+        transition-duration: 500ms
+    }
+
+    #toggleIcon span:nth-child(1){
+        top:10px;
+        left: 8px;
+        width: 20px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(2){
+        top:0px;
+        left: 0px;
+        opacity:1;
+        width: 35px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(3){
+        bottom:6px;
+        left: 0px;
+        width: 13px;
+        height: 5px;
+    }
+
+    #toggleIcon span:nth-child(4){
+        bottom:6px;
+        left: 22px;
+        width: 13px;
+        height: 5px;
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(1){
+        transform: rotate(-3deg) scaleY(1.1);
+    }
+      
+    #toggleIcon:not(.open):hover span:nth-child(2){
+        transform: rotate(3deg) scaleY(1.1);
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(3){
+        transform: rotate(-4deg) scaleY(1.1);
+    }
+
+    #toggleIcon:not(.open):hover span:nth-child(4){
+        transform: rotate(-10deg) scaleY(1.1);
+    }
+
+    #toggleIcon.open span:nth-child(1){
+        opacity:0;
+    }
+
+    #toggleIcon.open span:nth-child(2){
+        transform: rotate(45deg);
+        top: 30%;
+    }
+
+    #toggleIcon.open span:nth-child(3){
+        width: 35px;
+        transform: rotate(-45deg);
+        top: 30%;
+    }
+
+    #toggleIcon.open span:nth-child(4){
+        opacity:0;
+    }
+
+    .typed-cursor, .typed-cursor.typed-cursor--blink{
+        font-size: 36px;
+        color: #FFFFFF;
+    }
+
+    .h_text{
+        font-size: 36px;
+        line-height: -10px;
+    }
+
+    .br_elem{
+        display: none;
+    }
+
+    .hbp{
+        display: none;
+    }
+
+    a.button_c{
+        font-size: 18px;
+        line-height: 63px;
+        width: 100%;
+        height: 62px;
+        margin-right: -50px;
+    }
+
+    .button_n{
+        position: relative;
+        padding-left: 10px;
+        padding-right: 0px;
+        top: 40%;
+        width: 100%;
+    }
+
+    .arrow:before,
+    .arrow:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate( -20%, -50%) rotate(90deg) ;
+    }
+
+    .arrow:after{
+        width: 15px;
+        height: 15px;
+        transform: translate(-30%, -55%) rotate(140deg) ;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+    }
+
+    .arrow:before{
+        width: 2px;
+        height: 25px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background-color:white;
+    }
+
+    .scrolldown{
+        top: 93%;
+        left: 60%;
+    }
+
+
+    /* отвечает за блок "О нас" */
+    .block_about_us{
+        display: initial;
+    }
+
+    .h2_about_us{
+        display: inline;
+    }
+
+    .h2_about_us h2{
+        font-family: Roboto Slab;
+        font-size: 24px;
+
+    }
+
+    .h_about_us{
+        display: none;
+    }
+
+    .text_block_about_us{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text_about_us{
+        font-family: Roboto Slab;
+        font-size: 14px;
+    }
+    
+    .img_about_us{
+        width: 250px;
+        height: 279px;
+    }
+
+    /* отвечает за блок "Контакты" */
+    .block_contact{
+        display: initial;
+    }
+    
+    .desktop_info_block{
+        display: none;
+    }
+        
+    .modile_info_block{
+        display: inline;
+        text-align: center;
+    }
+    
+    .h_contact{
+        margin-bottom: 50px;
+        font-size: 24px;
+    }
+    
+    .img_contact{
+        width: 250px;
+        height: 220px;
+        margin-top: 0;
+    }
+    
+    .text_contact{
+        font-size: 14px;
+    }
+        
+    .text_phone{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .phone_and_gmail{
+        margin-left: 10px;
+    }
+    
+    .ml_ph, .ml_tk{
+        margin-left: 2rem !important;
+    }
+    
+    .book_left{
+        margin-left: 20%;
+    }
+        
+    .h2_book h1{
+        font-size: 24px;
+    }
+    /* отвечает за блок footer */
+    
+    div.footer a{
+        font-size: 18px;
+    }
+    
+    .other_footer_text{
+        font-size: 18px;
+    }
+    
+    .ml_text_footer{
+        padding-left: 0px;
+        margin-left: 0;
+    }
+    
+    .flex_footer2{
+        display: inline;
+    }
+    
+    .text_Timur{
+        font-size: 12px;
+    }
+    
+    .Copyright_text{
+        font-size: 12px;
+    }
+    
+    .mt_contact{
+        margin-top: -30px;
+    }
+    
+    .ml_about{
+        margin-left: -15px;
+    }
+    
+    .mlg_book{
+        justify-content: start !important;
+    }    
+}

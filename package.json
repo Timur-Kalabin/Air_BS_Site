@@ -1,0 +1,27 @@
+{
+  "name": "Air_BS_Site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "express-handlebars": "^4.0.4",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timur-Kalabin/Air_BS_Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Timur-Kalabin/Air_BS_Site/issues"
+  },
+  "homepage": "https://github.com/Timur-Kalabin/Air_BS_Site#readme"
+}
